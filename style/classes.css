@@ -1,0 +1,193 @@
+.logo{
+    width: 90px;
+    height: 90px;
+}
+.logo img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.menu li{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+.moldura{
+ 
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.slidebtn{
+    position:absolute;
+    height: 100%;
+    width: 5vw;
+    background-color:black;
+    opacity: 0.3;
+    color:grey;
+    border: none;
+    font-size: 50px;
+}
+.slidebtn:hover{
+    opacity: 0.6;
+}
+.voltar{
+    left: 0;
+}
+.avancar{
+    right: 0;
+}
+.slider{
+    
+    width: 100%;
+    display: flex;
+}
+.slide{
+    display: none;
+    align-items: center;
+    width: 100%;
+    animation: surge 0.9s;  
+}
+@keyframes surge {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.slide img{
+    max-width: 100%;
+    height: auto;
+}
+.navegacao{
+    left: 50%;
+    display: flex;
+    position:absolute;
+    bottom:50px;
+    transform: translate(-50%);
+}
+.dot{
+    border: 2px solid grey;
+    
+    width: 50px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 5px;
+    margin:10px;
+    cursor:pointer;
+    opacity: 0.5;
+}
+.navegacao label:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.active{
+    background-color: black;
+}
+
+.main{
+    margin:0 auto;
+    max-width: 1000px;
+    position:relative;
+    margin-top: -25px;
+}
+.sessao{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.sessao > .linha{
+    flex: 1 1 300px;
+}
+.linha{
+    display: flex;
+    align-items: center;
+
+}
+
+.col{
+    border-radius: 30px;
+    height: 200px;
+    width: 50%;
+    display:block;
+    text-align: center;
+    justify-content: space-around;
+    margin:10px;
+    transition: all 0.5;
+    background-color: white;
+}
+.item{
+    margin-top: 10px;
+    height: 50%;
+    transition: 0.3s height; 
+    text-align: center;
+}
+.col p{
+    color:rgb(153, 0, 204);
+}
+.item img{
+    height: 50%;
+    margin: auto;
+}
+.item:hover{
+    height: 80%;
+}
+div a{
+    margin: auto;
+    color: black;
+}
+
+.sessao2{
+    background-color: grey;
+    display: flex;
+    margin: 10px;
+    height: 500px;
+}
+
+.cabecalho{
+    width: 100%;
+    margin:10px;
+    padding: 20px;
+    color:black;
+    background-color: gray ;
+}
+.divisao{
+    height: 50px;
+}
+.divisao .btn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.btn a:hover{
+    background-color: grey;
+}
+.btn a{
+    border: 2px solid grey;
+    padding: 10px;
+}
+.btn{   
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+.quebrada{
+    display: flex;
+    flex-wrap: wrap;
+}
+.quebrada > .col{
+    flex: 1 1 460px;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/classes.css">
+        <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+        <script src="scripts/main.js"></script>
+        <title>
+            JS Estamparia Confecções
+        </title>
+    </head>
+    <body>
+       <header class="header">
+           <div class="logo">
+               <img src="img/logo.jpeg">
+           </div>
+           <nav>
+               <ul class="menu">
+                   <li><a href="/">Sobre nós</a></li>
+                   <li><a href="/">Serviços</a></li>
+                   <li><a href="/">Produtos</a></li>
+               </ul>
+           </nav>
+       </header>
+       <div class="moldura">
+            <div class="slider"> 
+                <button id="voltar" class="slidebtn voltar" onclick="volta()"><</button>
+                <button id="avancar" class="slidebtn avancar" onclick="vai()">></button>
+                
+                <div class="slide" name="slide">
+                    <img src="img/logo-contato-black.jpeg">
+                </div>
+                
+                <div class="slide" name="slide">
+                    <img src="img/post-img-12.jpeg">
+                </div>
+                <div class="slide" name="slide">
+                    <img src="img/post-img-13.jpeg">
+                </div>
+                <div class="slide" name="slide">
+                    <img src="img/post-img-8.jpeg">
+                </div>
+                <div class="slide" name="slide">
+                    <img src="img/post-img-7.jpeg">
+                </div>
+                <div class="navegacao">
+                    <label class="dot" name="dot" onclick="atual(1)"></label>
+                    <label class="dot" name="dot" onclick="atual(2)"></label>
+                    <label class="dot" name="dot" onclick="atual(3)"></label>
+                    <label class="dot" name="dot" onclick="atual(4)"></label>
+                    <label class="dot" name="dot" onclick="atual(5)"></label>
+                </div>
+            </div>
+            
+       </div>
+       
+       <div class="main">
+           <div class="sessao">
+               <div class="linha">
+                <div class="col">
+                    <img src="icones/serigrafia.png" class="item">
+                    <p>Serigrafia</p>
+                </div>
+                <div class="col ">
+                    <img src="icones/sublimacao.png" class="item">
+                    <p>Sublimação</p>
+                </div>
+               </div>
+               <div class="linha">
+                <div class="col"><a href="/" class="item">icone</a></div>
+                <div class="col"><a href="/" class="item">icone</a></div>
+               </div>
+           </div>
+           <div class="sessao2">
+                <a href="/">
+                    image de fundo com link
+                </a>
+           </div>
+           <div class="sessao">
+               <div class="cabecalho">
+                   <h1>Um título aqui</h1>
+               </div>
+               <div class="linha">
+                    <div class="col"><a href="/" class="item">algo aqui</a></div>
+                    <div class="col"><a href="/" class="item">algo aqui</a></div>
+               </div>
+               <div class="linha">
+                    <div class="col"><a href="/" class="item">algo aqui</a></div>
+                    <div class="col"><a href="/" class="item">algo aqui</a></div>
+                </div>
+            </div>
+            <div class="sessao divisao">
+                <hr size="5" width="100%"noshade>
+                <div class="btn">
+                    <a href="/" >veja mais</a>
+                </div>
+            </div>
+
+            <div class="sessao">
+                <div class="cabecalho">
+                    <h1>Um título aqui</h1>
+                </div>
+                <div class="linha quebrada">
+                     <div class="col"><a href="/" class="item">video aqui</a></div>
+                     <div class="col"><a href="/" class="item">video aqui</a></div>
+                </div>
+             </div>
+            
+             <div class="sessao divisao">
+                <hr size="5" width="100%"noshade>
+                <div class="btn">
+                    <a href="/" >veja mais</a>
+                </div>
+            </div>
+
+            <div class="sessao">
+                <div class="cabecalho">
+                    <h1>Nossos Clientes</h1>
+                </div>
+                <div class="linha">
+                     <div class="col"><a href="/" class="item">cliente</a></div>
+                     <div class="col"><a href="/" class="item">cliente</a></div>
+                </div>
+                <div class="linha">
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+               </div>
+               <div class="linha">
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+                </div>
+                <div class="linha">
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+                    <div class="col"><a href="/" class="item">cliente</a></div>
+                </div>
+             </div>
+       </div>
+     
+    </body>
+    <script>
+        let index = 1
+        this.slides = document.getElementsByClassName("slide")
+        this.globos = document.getElementsByClassName("dot")
+        ExibirSlideAltomatico()
+        function ExibirSlideAltomatico()
+        {
+            vai()
+            setTimeout(ExibirSlideAltomatico,5000)
+        }
+        
+        function volta(){
+            index--
+            atual(index)
+        }
+        function vai(){
+            index++
+            atual(index)
+        }
+        function atual(n){
+            if(n == 6)
+                {n = 1}
+            if(n == 0)
+                {n = 5}
+    
+            ExibirSlide(index = n)
+    
+        }
+
+function ExibirSlide(n){
+        let i
+        if(n > this.slides.length){
+            this.index = 1
+        }
+        if (n < 1){
+            this.index = this.slides.length
+        }
+        for (i = 0; i < this.slides.length; i++){
+            this.slides[i].style.display = "none"
+        }
+        for (i = 0 ; i < this.globos.length; i++)
+        {
+            this.globos[i].className = "dot"
+        }
+        this.slides[n - 1].style.display="flex"
+        this.globos[n - 1].className = "dot active"
+}
+    </script>
+</html>
