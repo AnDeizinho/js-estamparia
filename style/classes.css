@@ -13,6 +13,7 @@
     height: 100%;
     align-items: center;
 }
+
 .menu li{
     margin-left: 20px;
     margin-right: 20px;
@@ -22,10 +23,20 @@
     display: block;
     padding: 10px;
 }
+.menuico{
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+.menuico img{
+   width: 100%;
+   height: 100%;
+
+}
 .moldura{
  
     margin: 0 auto;
-    width: 100vw;
+    width: 96vw;
     height: auto;
     display: flex;
     position: relative;
@@ -143,7 +154,7 @@
     margin: auto;
 }
 .item:hover{
-    height: 80%;
+    height: 70%;
 }
 div a{
     margin: auto;

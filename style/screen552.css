@@ -1,0 +1,21 @@
+.menu{
+    display: none;
+}
+.menuico{
+    display: block;
+    padding:20px;
+}
+.menuico:hover{
+    border:2px solid blueviolet;
+}
+.menuico:active{
+    background-color: blueviolet;
+}
+.slidebtn{
+    width: 20px;
+    
+    font-size: 20px;
+}
+.dot{
+    width: 20px;   
+}

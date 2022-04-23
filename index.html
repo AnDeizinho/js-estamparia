@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/main.css">
         <link rel="stylesheet" href="style/classes.css">
+        <link rel="stylesheet" media="screen and (max-width:600px)" href="style/screen552.css">
         <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
-        <script src="scripts/main.js"></script>
         <title>
             JS Estamparia Confecções
         </title>
@@ -23,6 +23,9 @@
                    <li><a href="/">Produtos</a></li>
                </ul>
            </nav>
+           <div class="menuico">
+               <img src="icones/menu.png">
+           </div>
        </header>
        <div class="moldura">
             <div class="slider"> 
@@ -140,7 +143,8 @@
      
     </body>
     <script>
-        let index = 1
+     
+    let index = 1
         this.slides = document.getElementsByClassName("slide")
         this.globos = document.getElementsByClassName("dot")
         ExibirSlideAltomatico()
@@ -186,5 +190,7 @@ function ExibirSlide(n){
         this.slides[n - 1].style.display="flex"
         this.globos[n - 1].className = "dot active"
 }
+
+
     </script>
 </html>
