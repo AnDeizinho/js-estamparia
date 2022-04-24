@@ -65,9 +65,13 @@ header.activado{
 }
 .item{
     height: 40%;
+    width: 50%;
 }
-.col{
+.col {
     height: 150px;
+}
+.video{
+    height: 550px;
 }
 .col p{
     font-size: 10px;
@@ -75,4 +79,5 @@ header.activado{
 
 .item:hover{
     height: 60%;
+    width: 60%;
 }

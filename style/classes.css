@@ -116,13 +116,14 @@
     margin-top: -25px;
     background-color: black;
     border-radius: 30px;
-    box-shadow: 0 20px 40px blueviolet;
-    padding:20px;
+    animation: 5s colorizacaobox infinite;
+    padding:5px;
 }
 @media (max-width:1000px){
     .main{
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-shadow:0 0px 10px blueviolet;
     }
 }
 .sessao{
@@ -150,6 +151,34 @@
     transition: all 0.5;
     background-color: rgb(71, 206, 71);
     animation: colorizacao 5s infinite;
+    overflow: hidden;
+}
+.video{
+    height: 530px;
+    width: 200px;
+
+}
+.col iframe{
+    width: auto;
+    height: 100%;
+    border: none;
+}
+@keyframes colorizacaobox {
+    0%{
+        box-shadow: 0 20px 40px rgb(71, 206, 71);
+    }
+    25%{
+        box-shadow: 0 20px 40px  yellow;
+    }
+    50%{
+        box-shadow: 0 20px 40px  rgb(112, 112, 252);
+    }
+    75%{
+        box-shadow: 0 20px 40px  rgb(255, 101, 101);
+    }
+    100%{
+        box-shadow: 0 20px 40px  rgb(71, 206, 71);
+    }
 }
 @keyframes colorizacao {
     0%{
@@ -171,11 +200,16 @@
 .item{
     margin-top: 10px;
     height: 50%;
+    width: 50%;
     transition: 0.3s height; 
     text-align: center;
 }
 .col p{
     color:black;
+}
+.col-img{
+    height: auto;
+    width: 100%;
 }
 .item img{
     height: 50%;
@@ -183,6 +217,8 @@
 }
 .item:hover{
     height: 70%;
+    width: 70%;
+    transition: all 0.6s;
 }
 div a{
     margin: auto;
@@ -190,18 +226,28 @@ div a{
 }
 
 .sessao2{
-    background-color: grey;
     display: flex;
+    align-items: center;
+    justify-items: center;
     margin: 10px;
-    height: 500px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.sessao2 img{
+    width: 100%;
+    height: auto;
 }
 
 .cabecalho{
     width: 100%;
     margin:10px;
     padding: 20px;
-    color:black;
-    background-color: gray ;
+    color:yellow;
+    text-shadow: 0 2px 10px rgba(255, 255, 0, 0.4);
+}
+.cabecalho h1{
+    font-size: 40px;
 }
 .divisao{
     height: 50px;
@@ -228,5 +274,5 @@ div a{
     flex-wrap: wrap;
 }
 .quebrada > .col{
-    flex: 1 1 460px;
+    flex: 1 1 330px;
 }
