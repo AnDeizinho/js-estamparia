@@ -1,16 +1,48 @@
 .menu{
-    display: none;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    background-color:blueviolet; 
+    height: auto;
+    top: 103px;
+    right: 0;
+    transform: translate(100%);
+    transition: all 0.6s;
 }
+.menu.activado{
+    position: absolute;
+    transform: translate(0);
+}
+header{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+header.activado{
+    transition: all 0.6s;
+    position:relative;
+    overflow: visible;
+}
+.menu li{
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    border: 2px solid yellow ;
+    text-align: center;
+
+}
+
 .menuico{
+    background-color: yellow;
     display: block;
     padding:20px;
+    border-radius: 30px;
+    border:2px solid yellow;
 }
 .menuico:hover{
-    border:2px solid blueviolet;
+    border-color:  blueviolet;
 }
-.menuico:active{
-    background-color: blueviolet;
-}
+
 .slidebtn{
     width: 20px;
     
@@ -18,4 +50,19 @@
 }
 .dot{
     width: 20px;   
+}
+.navegacao{
+    bottom:0px;
+}
+.main{
+    margin-top: 10px;
+}
+.moldura{
+    background-color: aliceblue;
+    margin: 0 auto;
+    width: 96vw;
+    height: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }

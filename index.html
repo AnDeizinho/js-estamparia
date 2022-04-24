@@ -23,7 +23,7 @@
                    <li><a href="/">Produtos</a></li>
                </ul>
            </nav>
-           <div class="menuico">
+           <div class="menuico" id="btnmenu">
                <img src="icones/menu.png">
            </div>
        </header>
@@ -192,5 +192,17 @@ function ExibirSlide(n){
 }
 
 
+    </script>
+    <script>
+        
+        let btn = document.getElementById("btnmenu")
+        let menu = document.getElementsByClassName("menu")[0]
+        let cabecalho = document.getElementsByTagName("header")[0]
+        btn.addEventListener("click", ()=>{
+            cabecalho.classList.toggle("activado")
+            menu.classList.toggle("activado")
+        }) 
+        
+        
     </script>
 </html>
