@@ -19,7 +19,6 @@ header{
     transition: all 0.6s;
 }
 header.activado{
-    transition: all 0.6s;
     position:relative;
     overflow: visible;
 }
@@ -35,8 +34,6 @@ header.activado{
 .menuico{
     background-color: yellow;
     display: block;
-    padding:20px;
-    border-radius: 30px;
     border:2px solid yellow;
 }
 .menuico:hover{
@@ -65,4 +62,17 @@ header.activado{
     display: flex;
     position: relative;
     overflow: hidden;
+}
+.item{
+    height: 40%;
+}
+.col{
+    height: 150px;
+}
+.col p{
+    font-size: 10px;
+}
+
+.item:hover{
+    height: 60%;
 }
